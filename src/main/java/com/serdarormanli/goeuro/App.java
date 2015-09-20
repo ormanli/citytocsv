@@ -16,7 +16,7 @@ public class App {
 	public static void main(String[] args) {
 		try {
 			if (args.length < 1) {
-				throw new IllegalArgumentException("Enter an argument");
+				throw new IllegalArgumentException("Enter an argument\nCITY_NAME [OUTPUT_FILE_NAME]");
 			}
 
 			String cityName = args[0];
