@@ -27,14 +27,16 @@ public class App {
 
 			String fileName = null;
 
-			if (args.length > 1) {
-				fileName = args[1];
-			}
-
 			ListCity listCity = new ListCityImpl();
 			List<City> cities = listCity.listCity(cityName);
 
-			ResultToCsv<City> resultToCsv = new ResultToCsv<City>(listCity.getCSVFormat(), new FileWriter(listCity.getFileName(cityName, fileName)), listCity.getTemplates(), cities);
+			if (args.length > 1) {
+				fileName = args[1];
+			} else {
+				fileName = listCity.getFileName(cityName);
+			}
+
+			ResultToCsv<City> resultToCsv = new ResultToCsv<City>(listCity.getCSVFormat(), new FileWriter(fileName), listCity.getTemplates(), cities);
 
 			resultToCsv.print();
 		} catch (Exception e) {

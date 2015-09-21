@@ -44,13 +44,10 @@ public class ListCityImpl implements ListCity {
 	}
 
 	@Override
-	public String getFileName(String cityName, String fileName) {
-		if (fileName == null || fileName.length() < 1) {
-			DateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
-			fileName = cityName + "_" + format.format(new Date()) + ".csv";
-		}
+	public String getFileName(String baseValue) {
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
 
-		return fileName;
+		return baseValue + "_" + format.format(new Date()) + ".csv";
 	}
 
 	@Override

@@ -1,6 +1,5 @@
 package com.serdarormanli.goeuro;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -24,15 +23,6 @@ import com.serdarormanli.goeuro.service.internal.ListCity;
 import com.serdarormanli.goeuro.service.internal.ListCityImpl;
 
 public class ListCityTest {
-
-	@Test
-	public void givenNameTest() throws Exception {
-		ListCity listCity = new ListCityImpl();
-
-		String fileName = listCity.getFileName("Berlin", "test.csv");
-
-		assertEquals(fileName, "test.csv");
-	}
 
 	@Test
 	public void parseResultTest() throws Exception {

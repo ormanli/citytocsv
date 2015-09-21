@@ -36,10 +36,9 @@ public interface ListCity {
 	/**
 	 * Gets fileName of result
 	 * 
-	 * @param cityName
-	 * @param fileName
+	 * @param baseValue
 	 * @return
 	 */
-	public String getFileName(String cityName, String fileName);
+	public String getFileName(String baseValue);
 
 }
